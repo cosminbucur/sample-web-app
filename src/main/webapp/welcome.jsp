@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@ page import="java.net.InetAddress" %>
-<%@ page import="java.time.LocalTime" %>
+<%@ page import="java.time.LocalDateTime" %>
 <%@ page import="java.util.Enumeration" %>
 <!DOCTYPE html>
 <html>
@@ -29,14 +29,12 @@
 
 <%
     String hostName;
-    String serverName;
-    LocalTime time;
+    LocalDateTime time;
     String timeAsString;
     hostName = InetAddress.getLocalHost().getHostName() + " with IP=" + InetAddress
             .getLocalHost()
             .getHostAddress() + " ";
-    serverName = System.getProperty("weblogic.Name");
-    time = LocalTime.now();
+    time = LocalDateTime.now();
     timeAsString = time.toString();
 %>
 
@@ -45,7 +43,6 @@
 
 <div>
     <h4>Host Name & IP Address: <span><%=  hostName %></span></h4>
-    <h4>JVM Name: <span><%=  serverName %></span></h4>
     <h4> Date & Time: <span><%= timeAsString %></span></h4>
 </div>
 
