@@ -27,3 +27,7 @@ A sample Web Application with a Demo Servlet for Tomcat
     
     click **deploy** and select your war file or just **copy the war** to the 
     **tomcat\webapps** folder
+    
+3. run the app
+
+    go to http://localhost:8080/sample-web-app-1.0-SNAPSHOT/
